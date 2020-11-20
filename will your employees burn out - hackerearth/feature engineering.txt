@@ -1,0 +1,19 @@
+The two models used for submission are Catboost Regressor and Lightgbm with the ratio 2:1 for making ensemble submission.
+
+The features used are-
+
+'WFH Setup Available' , 'Designation', 'Resource Allocation','Mental Fatigue Score', 'Designation_res', 'des_gen_mfs','gen_wfh_mfs','Mfs/des', 'Mfs/res','experience'
+
+The features different from dataset-
+
+'Designation_res' is concatenation of Designation and Resource allocation which makes good differentiating categories for burn rate.
+
+'des_gen_mfs' is an aggregating feature for mean mental fatigue score grouped by designation and Gender.
+
+'gen_wfh_mfs' is an aggregating feature for mean mental fatigue score grouped by Gender and work from home available.
+
+'Mfs/des' is Mental Fatigue Score / (Designation+1)
+   
+'Mfs/res' is Mental Fatigue Score / (Resource Allocation+1)
+
+'experience' the duration of job since date of joining. 
